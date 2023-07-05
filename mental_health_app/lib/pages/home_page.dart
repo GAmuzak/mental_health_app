@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mental_health_app/utils/emoticons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -72,6 +73,31 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "How do you feel?",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Icon(Icons.more_horiz, size: 40 ,color: Colors.white,)
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Emoticons(emoji:"😔", title: "Sad"),
+                  Emoticons(emoji:"🙂", title: "Alright"),
+                  Emoticons(emoji:"😃", title: "Well"),
+                  Emoticons(emoji:"😁", title: "Excellent"),
+                ],
+              )
             ],
           ),
         ),
